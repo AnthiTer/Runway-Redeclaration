@@ -1,0 +1,108 @@
+
+.root {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Helvetica";
+    -fx-background: #424549;
+    -fx-base: #282b30;
+    -fx-text: #ffffff;
+    -fx-text-background-color:#ffffff;
+}
+
+Text {
+    -fx-fill: #ffffff;
+}
+
+.window-background {
+    -fx-background-color: #282b30;
+}
+.menu-buttons {
+    -fx-border-radius: 5;
+    -fx-background-radius:5;
+    -fx-background-color: #187bcd;
+    -fx-border-color: #000000;
+    -fx-effect: dropshadow( one-pass-box , rgba(24,123,205,0.6) , 8, 0.0 , 0 , 0 );
+    -fx-text-alignment: center;
+
+
+}
+.menu-buttons:hover{
+    -fx-border-radius: 5;
+    -fx-background-radius:5;
+    -fx-background-color: #156bb3;
+    -fx-border-color: #000000;
+    -fx-effect: dropshadow( three-pass-box , rgba(24,123,205,0.6) , 8, 0.0 , 0 , 0 );
+
+}
+
+.mainCalcButton{
+    -fx-background-color:
+            linear-gradient(#3f90d4 , #187bcd),
+            linear-gradient( #187bcd, #156bb3);}
+
+
+.mainCalcButton:hover{
+    -fx-background-color:
+            linear-gradient(rgba(24,123,205,0.6) , #3f90d4 ),
+            linear-gradient( #3f90d4 ,#187bcd);
+}
+
+
+
+.menu-ComboBox{
+    -fx-border-radius: 3;
+    -fx-background-radius:3;
+    -fx-background-color: #187bcd;
+    -fx-border-color: #000000;
+    -fx-text-fill: #000000;
+    -fx-effect: dropshadow( three-pass-box , rgba(24,123,205,0.6) , 8, 0.0 , 0 , 0 );
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+
+}
+
+.combo-box>.list-cell {
+    -fx-alignment: center;
+}
+
+.combo-box.center-aligned>.list-cell {
+    -fx-alignment: center;
+}
+
+.menu-ComboBox:hover{
+    -fx-border-radius: 5;
+    -fx-background-radius:5;
+    -fx-background-color: #156bb3;
+    -fx-border-color: #000000;
+
+}
+.menu-title{
+    -fx-text-fill: #ffffff;
+}
+.tabs{
+    -fx-background-color: rgba(24,123,205,0.6);
+
+
+}
+.vbox{
+    -fx-background-color: #187bcd;
+
+}
+
+.tabs:hover{
+    /*-fx-background-color: #3f90d4 ;*/
+    -fx-background-color:
+            linear-gradient(rgba(24,123,205,0.6) , #3f90d4 ),
+            linear-gradient( #3f90d4 ,#187bcd);
+
+}
+
+.tabs:selected {
+    -fx-background-color: #187bcd;
+
+
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+}

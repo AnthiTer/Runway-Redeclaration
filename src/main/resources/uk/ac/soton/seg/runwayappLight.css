@@ -1,0 +1,92 @@
+root{
+    -fx-font-size: 10pt;
+    -fx-font-family: "Helvetica";
+    -fx-background: white;
+    -fx-base: #282b30;
+    -fx-text: #ffffff;
+}
+
+.window-background {
+    -fx-background-color: white;
+    -fx-background-size: cover;
+}
+.menu-buttons {
+    -fx-border-radius: 5;
+    -fx-background-radius:5;
+    -fx-background-color: #dddddd;
+    -fx-border-color: #000000;
+    -fx-text-alignment: center;
+}
+
+
+.mainCalcButton{
+    -fx-background-color:
+            linear-gradient(#e8e8e8 ,  #dcdcdc),
+            linear-gradient(  #dcdcdc,  #cdcdcd);}
+
+
+.mainCalcButton:hover{
+    -fx-background-color:
+            linear-gradient( #ededed , #e8e8e8 ),
+            linear-gradient(#e8e8e8,#dcdcdc);
+}
+
+.menu-ComboBox{
+    -fx-border-radius: 3;
+    -fx-background-radius:3;
+    -fx-background-color: #dedede;
+    -fx-border-color: #000000;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+
+}
+.combo-box>.list-cell {
+    -fx-alignment: center;
+}
+
+.combo-box.center-aligned>.list-cell {
+    -fx-alignment: center;
+}
+
+.menu-buttons:hover{
+    -fx-border-radius: 5;
+    -fx-background-radius:5;
+    -fx-background-color: #cdcdcd;
+    -fx-border-color: #000000;
+}
+.menu-ComboBox:hover{
+    -fx-border-radius: 5;
+    -fx-background-radius:5;
+    -fx-background-color: #cdcdcd;
+    -fx-border-color: #000000;
+
+}
+.title{
+    -fx-text-fill: #000000;
+}
+.vbox{
+    -fx-background-color: #dcdcdc;
+
+}
+.tabs{
+    -fx-background-color:#dcdcdc;
+
+}
+
+.tabs:hover{
+    -fx-background-color:
+            linear-gradient( #ededed , #e8e8e8 ),
+            linear-gradient(#e8e8e8,#dcdcdc);
+}
+
+.tabs:selected {
+
+    -fx-background-color:
+            #ededed;
+
+
+}
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+}

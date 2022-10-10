@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<airport name="LONDON HEATHROW">
+    <identifier>EGLL</identifier>
+    <runways>
+        <runway>
+            <designator>09L</designator>
+            <bearing>89.67</bearing>
+            <TORA>3901</TORA>
+            <TODA>3901</TODA>
+            <ASDA>3901</ASDA>
+            <LDA>3592</LDA>
+            <remarks>LDA: 09L landing threshold is displaced by 309 M.</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>3882</TORA>
+            <TODA>3960</TODA>
+            <ASDA>3882</ASDA>
+            <LDA>3882</LDA>
+            <remarks />
+        </runway>
+        <runway>
+            <designator>09L</designator>
+            <bearing>89.67</bearing>
+            <TORA>3362</TORA>
+            <TODA>3362</TODA>
+            <ASDA>3362</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A12</remarks>
+        </runway>
+        <runway>
+            <designator>09L</designator>
+            <bearing>89.67</bearing>
+            <TORA>2838</TORA>
+            <TODA>2838</TODA>
+            <ASDA>2838</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A11</remarks>
+        </runway>
+        <runway>
+            <designator>09L</designator>
+            <bearing>89.67</bearing>
+            <TORA>2661</TORA>
+            <TODA>2661</TODA>
+            <ASDA>2661</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A10W</remarks>
+        </runway>
+        <runway>
+            <designator>09L</designator>
+            <bearing>89.67</bearing>
+            <TORA>2354</TORA>
+            <TODA>2354</TODA>
+            <ASDA>2354</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A10E</remarks>
+        </runway>
+        <runway>
+            <designator>09L</designator>
+            <bearing>89.67</bearing>
+            <TORA>1992</TORA>
+            <TODA>1992</TODA>
+            <ASDA>1992</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A9W</remarks>
+        </runway>
+        <runway>
+            <designator>09L</designator>
+            <bearing>89.67</bearing>
+            <TORA>1789</TORA>
+            <TODA>1789</TODA>
+            <ASDA>1789</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A9E</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>3539</TORA>
+            <TODA>3617</TODA>
+            <ASDA>3539</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A4</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>3136</TORA>
+            <TODA>3214</TODA>
+            <ASDA>3136</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A5</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>2862</TORA>
+            <TODA>2940</TODA>
+            <ASDA>2862</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A6</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>2617</TORA>
+            <TODA>2695</TODA>
+            <ASDA>2617</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A7</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>2414</TORA>
+            <TODA>2492</TODA>
+            <ASDA>2414</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A8</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>2142</TORA>
+            <TODA>2220</TODA>
+            <ASDA>2142</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A9E</remarks>
+        </runway>
+        <runway>
+            <designator>27R</designator>
+            <bearing>269.71</bearing>
+            <TORA>1947</TORA>
+            <TODA>2025</TODA>
+            <ASDA>1947</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with A9W</remarks>
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>3658</TORA>
+            <TODA>3658</TODA>
+            <ASDA>3658</ASDA>
+            <LDA>3350</LDA>
+            <remarks>LDA: 09R landing threshold is displaced by 308 M</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>3658</TORA>
+            <TODA>3658</TODA>
+            <ASDA>3658</ASDA>
+            <LDA>3658</LDA>
+            <remarks />
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>3528</TORA>
+            <TODA>3528</TODA>
+            <ASDA>3528</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N10</remarks>
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>3351</TORA>
+            <TODA>3351</TODA>
+            <ASDA>3351</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N8</remarks>
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>2853</TORA>
+            <TODA>2853</TODA>
+            <ASDA>2853</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with S7.</remarks>
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>2852</TORA>
+            <TODA>2852</TODA>
+            <ASDA>2852</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N7</remarks>
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>2325</TORA>
+            <TODA>2325</TODA>
+            <ASDA>2325</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N6</remarks>
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>2244</TORA>
+            <TODA>2244</TODA>
+            <ASDA>2244</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with S6</remarks>
+        </runway>
+        <runway>
+            <designator>09R</designator>
+            <bearing>89.68</bearing>
+            <TORA>1704</TORA>
+            <TODA>1704</TODA>
+            <ASDA>1704</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N5W</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>3536</TORA>
+            <TODA>3536</TODA>
+            <ASDA>3536</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N2E</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>3380</TORA>
+            <TODA>3380</TODA>
+            <ASDA>3380</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N2W</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>3224</TORA>
+            <TODA>3224</TODA>
+            <ASDA>3224</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N3</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>3212</TORA>
+            <TODA>3212</TODA>
+            <ASDA>3212</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with S3</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>2702</TORA>
+            <TODA>2702</TODA>
+            <ASDA>2702</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersections with N4E</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>2606</TORA>
+            <TODA>2606</TODA>
+            <ASDA>2606</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with S4W</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>2589</TORA>
+            <TODA>2589</TODA>
+            <ASDA>2589</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with S4E</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>2441</TORA>
+            <TODA>2441</TODA>
+            <ASDA>2441</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N4W</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>2222</TORA>
+            <TODA>2222</TODA>
+            <ASDA>2222</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with S5E</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>2091</TORA>
+            <TODA>2091</TODA>
+            <ASDA>2091</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with N5E</remarks>
+        </runway>
+        <runway>
+            <designator>27L</designator>
+            <bearing>269.72</bearing>
+            <TORA>2081</TORA>
+            <TODA>2081</TODA>
+            <ASDA>2081</ASDA>
+            <LDA>0</LDA>
+            <remarks>Take-off from intersection with S5W</remarks>
+        </runway>
+    </runways>
+</airport>

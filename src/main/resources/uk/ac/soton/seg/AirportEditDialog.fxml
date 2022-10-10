@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="bPaneParent"  xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.seg.AirportEditDialogController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu text="File">
+               <items>
+                  <MenuItem onAction="#importXmlPressed" text="Import (.xml)" />
+                  <!--<MenuItem disable="true" onAction="#exportXmlPressed" text="Export (.xml)" />-->
+                  <MenuItem onAction="#goStartMenu" text="Exit Airport Editor" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane>
+         <center>
+            <Accordion fx:id="mainAccordion" BorderPane.alignment="CENTER">
+            </Accordion>
+         </center>
+      </BorderPane>
+   </center>
+
+</BorderPane>
