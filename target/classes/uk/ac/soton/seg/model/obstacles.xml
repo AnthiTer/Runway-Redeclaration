@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17" class="java.beans.XMLDecoder">
+    <object class="io.Wrapper">
+        <void property="wrappedClass">
+            <class>Model.Obstacle</class>
+        </void>
+        <void property="wrappedObject">
+            <array class="Model.Obstacle" length="6">
+                <void index="0">
+                    <object class="Model.Obstacle">
+                        <void property="name">
+                            <string>Boeing 787-10</string>
+                        </void>
+                        <void property="height">
+                            <int>17</int>
+                        </void>
+                        <void property="width">
+                            <int>60</int>
+                        </void>
+                        <void property="length">
+                            <int>68</int>
+                        </void>
+                    </object>
+                </void>
+                <void index="1">
+                    <object class="Model.Obstacle">
+                        <void property="name">
+                            <string>Car</string>
+                        </void>
+                        <void property="height">
+                            <int>2</int>
+                        </void>
+                        <void property="width">
+                            <int>2</int>
+                        </void>
+                        <void property="length">
+                            <int>2</int>
+                        </void>
+                    </object>
+                </void>
+                <void index="2">
+                    <object class="Model.Obstacle">
+                        <void property="name">
+                            <string>Shuttle bus</string>
+                        </void>
+                        <void property="height">
+                            <int>4</int>
+                        </void>
+                        <void property="width">
+                            <int>3</int>
+                        </void>
+                        <void property="length">
+                            <int>5</int>
+                        </void>
+                    </object>
+                </void>
+                <void index="3">
+                    <object class="Model.Obstacle">
+                        <void property="name">
+                            <string>Fire Truck</string>
+                        </void>
+                        <void property="height">
+                            <int>4</int>
+                        </void>
+                        <void property="width">
+                            <int>3</int>
+                        </void>
+                        <void property="length">
+                            <int>6</int>
+                        </void>
+                    </object>
+                </void>
+                <void index="4">
+                    <object class="Model.Obstacle">
+                        <void property="name">
+                            <string>Shipping Crate</string>
+                        </void>
+                        <void property="height">
+                            <int>3</int>
+                        </void>
+                        <void property="width">
+                            <int>3</int>
+                        </void>
+                        <void property="length">
+                            <int>6</int>
+                        </void>
+                    </object>
+                </void>
+                <void index="5">
+                    <object class="Model.Obstacle">
+                        <void property="name">
+                            <string>Felled trees</string>
+                        </void>
+                        <void property="height">
+                            <int>2</int>
+                        </void>
+                        <void property="width">
+                            <int>10</int>
+                        </void>
+                        <void property="length">
+                            <int>10</int>
+                        </void>
+                    </object>
+                </void>
+            </array>
+        </void>
+    </object>
+</java>

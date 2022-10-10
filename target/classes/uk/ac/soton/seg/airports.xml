@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17" class="java.beans.XMLDecoder">
+    <object class="IO.Wrapper">
+        <void property="wrappedClass">
+            <class>Model.Airport</class>
+        </void>
+        <void property="wrappedObject">
+            <array class="Model.Airport" length="2">
+                <void index="0">
+                    <object class="Model.Airport" id="Airport0">
+                        <void property="name">
+                            <string>Southampton</string>
+                        </void>
+                        <void property="identifier">
+                            <string>SOU</string>
+                        </void>
+                        <void property="runways">
+                            <void method="add">
+                                <object class="Model.Runway" id="Runway0">
+                                    <void property="designator">
+                                        <string>02</string>
+                                    </void>
+                                    <void property="defaultTORA">
+                                        <int>1723</int>
+                                    </void>
+                                    <void property="defaultTODA">
+                                        <int>1831</int>
+                                    </void>
+                                    <void property="defaultASDA">
+                                        <int>1723</int>
+                                    </void>
+                                    <void property="defaultLDA">
+                                        <int>1650</int>
+                                    </void>
+                                </object>
+                            </void>
+                        </void>
+                        <void property="runways">
+                            <void method="add">
+                                <object class="Model.Runway" id="Runway1">
+                                    <void property="designator">
+                                        <string>20</string>
+                                    </void>
+                                    <void property="defaultTORA">
+                                        <int>1650</int>
+                                    </void>
+                                    <void property="defaultTODA">
+                                        <int>1805</int>
+                                    </void>
+                                    <void property="defaultASDA">
+                                        <int>1650</int>
+                                    </void>
+                                    <void property="defaultLDA">
+                                        <int>1605</int>
+                                    </void>
+                                </object>
+                            </void>
+                        </void>
+                    </object>
+                </void>
+            </array>
+        </void>
+    </object>
+</java>

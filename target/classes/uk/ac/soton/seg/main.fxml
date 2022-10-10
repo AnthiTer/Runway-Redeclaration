@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import uk.ac.soton.seg.ui.SideCanvas?>
+<?import uk.ac.soton.seg.ui.TopCanvas?>
+
+<BorderPane fx:id="bPaneParent" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="window-background" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.soton.seg.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu text="File">
+               <items>
+                  <!--<Menu text="Import">
+                     <items>
+                        <MenuItem onAction="#impAir" text="Airport (.xml)" />
+                        <MenuItem onAction="#impObs" text="Obstacle (.xml)" />
+                     </items>
+                  </Menu>-->
+                  <Menu text="Export">
+                     <items>
+                        <MenuItem onAction="#exportCanvasImages" text="Diagram snapshot (.png)" />
+                        <MenuItem onAction="#exportCalcsToTxt" text="Calculations (.txt)" />
+                        <MenuItem onAction="#expAir" text="Airport (.xml)" />
+                        <MenuItem onAction="#expObs" text="Obstacle (.xml)" />
+                        <MenuItem onAction="#exportReport" text="Report (.html)" />
+                     </items>
+                  </Menu>
+                  <MenuItem onAction="#goStartMenu" text="Exit Calculation" />
+               </items>
+            </Menu>
+            <Menu text="Edit">
+               <items>
+                  <MenuItem onAction="#goAirports" text="Add/Edit Runway" />
+                  <MenuItem onAction="#goObstacles" text="Add/Edit Obstacle" />
+                  <MenuItem onAction="#clearAllFields" text="Clear all" />
+               </items>
+            </Menu>
+            <Menu text="View">
+               <items>
+                  <CheckMenuItem fx:id="rotateRunwayCheck" onAction="#setRunwayRotation" selected="false" text="Rotate runway to bearing" />
+                  <CheckMenuItem fx:id="showAeroplaneCheck" onAction="#setShowAeroplane" selected="true" text="Show Aeroplane" />
+                  <CheckMenuItem fx:id="showCGAreaCheck" onAction="#setCGArea" selected="true" text="Show Clear and Graded Area" />
+                  <CheckMenuItem fx:id="showDistMarkersCheck" onAction="#setDistMarkers" selected="true" text="Show distance markers" />
+                  <Menu text="Top View y-scale">
+                    <items>
+                        <RadioMenuItem fx:id="topViewYScaleHalfx" onAction="#redrawFromEvent" text="0.5x">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="TopViewYScale" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="topViewYScale1x" onAction="#redrawFromEvent" selected="true" text="1x" toggleGroup="$TopViewYScale" />
+                        <RadioMenuItem fx:id="topViewYScale2x" onAction="#redrawFromEvent" text="2x" toggleGroup="$TopViewYScale" />
+                        <RadioMenuItem fx:id="topViewYScale5x" onAction="#redrawFromEvent" text="5x" toggleGroup="$TopViewYScale" />
+                    </items>
+                  </Menu>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <ScrollPane hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" BorderPane.alignment="CENTER">
+         <content>
+            <VBox alignment="CENTER" prefWidth="230.0" spacing="10.0">
+               <children>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" text="Airport" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin></Label>
+                        <TextFlow>
+                           <children>
+                              <Text fx:id="currentAirport" text="-" />
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label text="Runway" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="2.0" />
+                           </VBox.margin></Label>
+                        <ComboBox fx:id="runwaySelectionBox" maxWidth="1.7976931348623157E308" onAction="#setRunway" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="20.0" layoutY="72.0" spacing="10.0">
+                     <children>
+                        <Label text="Obstacle (HxLxW)" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="2.0" />
+                           </VBox.margin></Label>
+                        <ComboBox fx:id="obstacleSelectionBox" maxWidth="1.7976931348623157E308" onAction="#setObstacle" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Obstacle Position:" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="4.0" />
+                           </VBox.margin></Label>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="L / R  from the Centre" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin></Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="171.0" spacing="20.0">
+                                 <children>
+                                    <RadioButton fx:id="directionToggleButton1" onAction="#setDirection" selected="true" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="directionToggle" />
+                                       </toggleGroup>
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton fx:id="directionToggleButton2" onAction="#setDirection" text="R" toggleGroup="$directionToggle">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin></RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Distance from Centre (m)" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin></Label>
+                              <TextField fx:id="distCentre" maxWidth="1.7976931348623157E308" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox prefWidth="141.0" spacing="5.0">
+                           <children>
+                              <Label text="Distance from Threshold (m)" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin></Label>
+                              <TextField fx:id="distThres" maxWidth="1.7976931348623157E308" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label text="Flight type" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></Label>
+                        <ComboBox fx:id="flightModeBox" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </VBox>
+                  <Button minHeight="40.0" minWidth="150.0" onAction="#doCalculation" prefHeight="40.0" prefWidth="150.0" styleClass="mainCalcButton" text="CALCULATE" textAlignment="CENTER">
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </left>
+   <center>
+      <SplitPane dividerPositions="0.65">
+         <items>
+            <SplitPane dividerPositions="0.68" orientation="VERTICAL" prefHeight="571.0" prefWidth="612.0">
+               <items>
+                  <TabPane minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab fx:id="topTab" onSelectionChanged="#onNormalTabSelect" styleClass="tabs" text="Top View">
+                           <content>
+                              <TopCanvas fx:id="topCanvas" height="300" visible="false" width="600" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="sideTab" onSelectionChanged="#onNormalTabSelect" styleClass="tabs" text="Side View">
+                           <content>
+                              <SideCanvas fx:id="sideCanvas" height="300" visible="false" width="600" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="simultaneousTab" onSelectionChanged="#onSimTabSelect" styleClass="tabs" text="Simultaneous View">
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <TabPane>
+                     <tabs>
+                        <Tab closable="false" styleClass="tabs" text="Notifications">
+                           <content>
+                               <ScrollPane fx:id="notifPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS">
+                                   <content>
+                                         <VBox fx:id="notifvbox">
+                                             <padding>
+                                                 <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                             </padding>
+                                         </VBox>
+                                   </content>
+                               </ScrollPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="errorlog" closable="false" styleClass="tabs" text="Error Log">
+                           <content>
+                               <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" pannable="true" vbarPolicy="ALWAYS">
+                                   <content>
+                                         <VBox fx:id="errorvbox">
+                                            <padding>
+                                            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                                            </padding>
+                                         </VBox>
+                                   </content>
+                               </ScrollPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </items>
+            </SplitPane>
+            <TabPane layoutX="10.0" layoutY="10.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab styleClass="tabs" text="Results">
+                     <content>
+                        <VBox spacing="15.0">
+                           <children>
+                              <TextFlow>
+                                 <children>
+                                    <Text text="ORIGINAL:&#10;">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="originalParamsText" />
+                                 </children>
+                              </TextFlow>
+                              <TextFlow layoutX="10.0" layoutY="26.0">
+                                 <children>
+                                    <Text text="NEW:&#10;">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="calculationOutText" />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab styleClass="tabs" text="Calculation Breakdown">
+                     <content>
+                        <VBox spacing="15.0">
+                           <children>
+                              <TextFlow>
+                                 <children>
+                                    <Text text="Current flight type is: " />
+                                    <Text fx:id="breakdownFlightType" text="Text" />
+                                 </children>
+                              </TextFlow>
+                              <TextFlow>
+                                 <children>
+                                    <Text text="TORA:&#10;">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="breakdownExplanationTora" />
+                                 </children>
+                              </TextFlow>
+                              <TextFlow>
+                                 <children>
+                                    <Text text="TODA:&#10;">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="breakdownExplanationToda" />
+                                 </children>
+                              </TextFlow>
+                              <TextFlow>
+                                 <children>
+                                    <Text text="ASDA:&#10;">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="breakdownExplanationAsda" />
+                                 </children>
+                              </TextFlow>
+                              <TextFlow>
+                                 <children>
+                                    <Text text="LDA:&#10;">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="breakdownExplanationLda" />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>
